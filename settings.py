@@ -72,6 +72,13 @@ INSTALLED_OTREE_APPS = [
     'battle_of_the_sexes',
     'survey_sample',
     'asset_market',
+
+    # donja
+    'weak_link',
+    'pub_goods',
+    'results_donja',
+    'norms',
+
 ]
 
 SECRET_KEY = SECRET_KEY

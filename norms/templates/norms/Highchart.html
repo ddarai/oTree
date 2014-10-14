@@ -1,0 +1,31 @@
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        credits: false,
+        legend: {
+            enabled: false
+        },
+        title: {
+            text: 'Answers to Question {{ round_number }}'
+        },
+        xAxis: {
+            categories: {{ option_labels|safe }} //['very inappropriate','somewhat inappropriate','somewhat appropriate','very appropriate']
+
+        },
+        yAxis: {
+            title: {
+                text: 'Number of people'
+            }
+        },
+        series: [{
+            data: {{ popularity_counts }}, //[5, 7, 3, 8]
+            color: '#1b3665'
+        }]
+    });
+});
+</script>

@@ -1,0 +1,1 @@
+{% extends "global/Base.html" %}{% load staticfiles floppyforms otree_tags %}{% block title %}    Shared-Values Question {{ round_number }}{% endblock %}{% block content %}    {% formrow form.rating with label="Your answer:" %}    {% next_button %}{% endblock %}

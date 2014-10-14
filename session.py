@@ -7,6 +7,41 @@ import os
 def session_types():
 
     return [
+
+        SessionType(
+            name='Norm Elicitation',
+            base_pay=0,
+            participants_per_session=3,
+            participants_per_demo_session=3,
+            subsession_apps=['norms', 'results_donja'],
+            doc=""""""
+        ),
+        SessionType(
+            name='Weak Link Game',
+            base_pay=0,
+            participants_per_session=3,
+            participants_per_demo_session=3,
+            subsession_apps=['weak_link', 'results_donja'],
+            doc=""""""
+        ),
+        SessionType(
+            name='Public Goods Game 2',
+            base_pay=0,
+            participants_per_session=6,
+            participants_per_demo_session=6,
+            subsession_apps=['pub_goods','pub_goods', 'results_donja'],
+            doc=""""""
+        ),
+        SessionType(
+            name='All',
+            base_pay=0,
+            participants_per_session=10,
+            participants_per_demo_session=20,
+            subsession_apps=['weak_link','norms','norms','pub_goods','pub_goods','pub_goods','pub_goods','pub_goods', 'results_donja'],
+            doc=""""""
+        ),
+
+
         SessionType(
             name="Demo Game",
             base_pay=0,

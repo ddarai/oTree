@@ -1,0 +1,30 @@
+{% extends "global/Base.html" %}
+{% load i18n %}
+{% load staticfiles floppyforms otree_tags %}
+
+{% block title %}
+   Earnings
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        You have completed all experiments.
+    </p>
+
+    <table class="table" style="width:400px">
+        <tr>
+            <td>Earnings in each experiment:</td>
+            <td>{{ payoff_from_subsessions }}</td>
+        </tr>
+        <tr>
+            <th>Total earnings</th>
+            <th>{{ total_pay }}</th>
+        </tr>
+    </table>
+
+{% endblock %}
+
+{% block form %}
+
+{% endblock %}

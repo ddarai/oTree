@@ -1,0 +1,30 @@
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        credits: false,
+        legend: {
+            enabled: false
+        },
+        title: {
+            text: 'Choices'
+        },
+        xAxis: {
+            categories: {{ option_labels|safe }} //['100 %','80 %','60 %', '40 %','20 %', '0 %']
+        },
+        yAxis: {
+            title: {
+                text: 'Number of people'
+            }
+        },
+        series: [{
+            data: {{ popularity_counts }}, //[5, 7, 3, 2, 3, 8]
+            color: '#1b3665'
+        }]
+    });
+});
+</script>

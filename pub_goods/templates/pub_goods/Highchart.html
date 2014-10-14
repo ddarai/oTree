@@ -1,0 +1,39 @@
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        credits: false,
+        title: {
+            text: 'Average Contribution in Your Group in Round {{ round_number }}',
+            x: -20 //center
+        },
+        xAxis: {
+                categories: {{ round_labels }}  // ['1', '2', '3', ...]
+        },
+        yAxis: {
+            title: {
+                text: 'Contribution'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0,
+            enabled: false
+        },
+        series: [{
+            name: 'Group {{ group }}',
+            data: {{ avg_contribution_list|safe }},
+            color: '#1b3665'
+        }]
+    });
+});
+
+</script>
