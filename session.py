@@ -19,7 +19,7 @@ def session_types():
         SessionType(
             name='Weak Link Game',
             base_pay=0,
-            participants_per_session=3,
+            participants_per_session=60,
             participants_per_demo_session=3,
             subsession_apps=['weak_link', 'results_donja'],
             doc=""""""
