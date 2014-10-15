@@ -43,7 +43,7 @@ def session_types():
         SessionType(
             name='Two60',
             base_pay=0,
-            participants_per_session=20,
+            participants_per_session=60,
             participants_per_demo_session=10,
             subsession_apps=['weak_link','norms','norms', 'results_donja'],
             doc=""""""
