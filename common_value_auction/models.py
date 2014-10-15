@@ -19,8 +19,6 @@ class Constants:
     min_allowable_bid = Money(0.0)
     max_allowable_bid = Money(10.0)
 
-
-
     # Error margin for the value estimates shown to the players
     estimate_error_margin = Money(1.00)
 
@@ -75,12 +73,10 @@ class Player(otree.models.BasePlayer):
     # </built-in>
 
     item_value_estimate = models.MoneyField(
-        default=None,
         doc="""Estimate of the common value, may be different for each player"""
     )
 
     bid_amount = models.MoneyField(
-        default=None,
         doc="""Amount bidded by the player"""
     )
 
