@@ -37,10 +37,10 @@ class Results(Page):
 
     def variables_for_template(self):
         round_labels = range(1,self.subsession.number_of_rounds+1)
-        avg_list = []
-        for p in self.player.me_in_previous_rounds() + [self.player]:
-            avg_list.append(float(p.group.avg_contribution))
-            avg_list += [None]*(self.subsession.number_of_rounds - self.subsession.round_number)
+        avg_list = [None]*self.subsession.number_of_rounds
+        for i, p in enumerate(self.player.me_in_all_rounds()):
+            avg_list[i]=float(p.group.avg_contribution)
+
 
         return {
             'sum_contribution': self.group.sum_contribution,

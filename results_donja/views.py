@@ -11,7 +11,7 @@ class RedemptionCode(Page):
         self.player.set_payoff()
         participant = self.player.participant
         return {'base_pay': participant.session.base_pay,
-                'payoff_from_subsessions': participant.payoff_from_subsessions(),
+                #'payoff_from_subsessions': participant.payoff_from_subsessions(),
                 'total_pay': participant.total_pay(),
                 'redemption_code': participant.label or participant.code,}
 

@@ -25,10 +25,9 @@ class ResultsWaitPage(WaitPage):
 
     # THIS SOLUTION WORKS
     def after_all_players_arrive(self):
-        for p in self.subsession.get_players():
-            #p.random()
-            p.subsession.most_common()
-            p.subsession.set_payoffs()
+        #p.random()
+        self.subsession.most_common()
+        self.subsession.set_payoffs()
 
     def body_text(self):
         return "Waiting for other players to decide."

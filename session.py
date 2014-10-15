@@ -35,8 +35,8 @@ def session_types():
         SessionType(
             name='All',
             base_pay=0,
-            participants_per_session=10,
-            participants_per_demo_session=20,
+            participants_per_session=6,
+            participants_per_demo_session=6,
             subsession_apps=['weak_link','norms','norms','pub_goods','pub_goods','pub_goods','pub_goods','pub_goods', 'results_donja'],
             doc=""""""
         ),
