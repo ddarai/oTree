@@ -29,8 +29,8 @@ class Subsession(otree.models.BaseSubsession):
 
     def set_payoffs(self):
         for p in self.get_players():
-            assert p.decision
-            assert self.min_value
+            assert p.decision is not None
+            assert self.min_value is not None
             p.payoff = self.a + self.b * self.min_value - self.c * p.decision
 
 
