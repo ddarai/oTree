@@ -28,9 +28,8 @@ class ResultsWaitPage(WaitPage):
     scope = models.Subsession
 
     def after_all_players_arrive(self):
-        for p in self.subsession.get_players():
-            p.subsession.minimum()
-            p.subsession.set_payoffs()
+        self.subsession.minimum()
+        self.subsession.set_payoffs()
     
     def body_text(self):
         return "Waiting for other players to decide."
