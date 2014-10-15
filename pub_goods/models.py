@@ -52,7 +52,7 @@ class Group(otree.models.BaseGroup):
     
     def set_payoffs(self):
         for p in self.get_players():
-            p.payoff = (self.subsession.endowment - p.contribution) + self.subsession.a/self.players_per_group * p.group.sum_contribution
+            p.payoff = (self.subsession.endowment - p.contribution) + self.subsession.a/self.players_per_group * self.sum_contribution
 
 class Player(otree.models.BasePlayer):
     # <built-in>
