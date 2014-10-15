@@ -29,7 +29,7 @@ def session_types():
             base_pay=0,
             participants_per_session=20,
             participants_per_demo_session=6,
-            subsession_apps=['pub_goods'],
+            subsession_apps=['pub_goods']*2,
             doc=""""""
         ),
         SessionType(
