@@ -7,7 +7,7 @@ from otree.common import Money, money_range
 
 author = 'Donja Darai'
 
-PLAYERS_PER_GROUP = 3
+PLAYERS_PER_GROUP = 10
 
 doc = """
 Public goods game with groups of {} and an marginal per capita return of 0.2
@@ -50,7 +50,7 @@ class Group(otree.models.BaseGroup):
     
     def set_payoffs(self):
         for p in self.get_players():
-            p.payoff = (self.subsession.endowment - p.contribution) + self.subsession.a/self.players_per_group * p.group.sum_contribution
+            p.payoff = (self.subsession.endowment - p.contribution) + self.subsession.a/self.players_per_group * self.sum_contribution
 
 class Player(otree.models.BasePlayer):
     # <built-in>

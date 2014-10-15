@@ -27,9 +27,9 @@ def session_types():
         SessionType(
             name='Public Goods Game 2',
             base_pay=0,
-            participants_per_session=6,
+            participants_per_session=60,
             participants_per_demo_session=6,
-            subsession_apps=['pub_goods','pub_goods', 'results_donja'],
+            subsession_apps=['pub_goods'],
             doc=""""""
         ),
         SessionType(
@@ -45,7 +45,7 @@ def session_types():
             base_pay=0,
             participants_per_session=60,
             participants_per_demo_session=10,
-            subsession_apps=['weak_link','norms','norms', 'results_donja'],
+            subsession_apps=['pub_goods','weak_link','norms', 'results_donja'],
             doc=""""""
         ),
 

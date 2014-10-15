@@ -7,7 +7,7 @@ class PlayerBot(Bot):
 
     def play(self):
 
-        #self.submit(views.Contribution, {"contribution": random.choice(range(0, self.subsession.endowment))})
-        self.submit(views.Contribution, {"contribution": 4})
+        self.submit(views.Contribution, {"contribution": random.choice(range(0, self.subsession.endowment))})
+        #self.submit(views.Contribution, {"contribution": 4})
 
         self.submit(views.Results)
