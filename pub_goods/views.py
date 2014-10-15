@@ -42,9 +42,12 @@ class Results(Page):
             try:
                 avg_list[i]=float(p.group.avg_contribution)
             except:
-                print 'p.group.pk: {}'.format(p.group.pk)
-                print 'p.group.avg_contribution: {}'.format(p.group.pk)
-                raise
+                print 'app: {}, p.pk: {}, p.group.pk: {}, p.group.avg_contribution: {}'.format(
+                    p.group.subsession.app_name,
+                    p.pk,
+                    p.group.pk,
+                    p.group.avg_contribution,
+                )
 
 
         return {
