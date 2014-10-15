@@ -40,6 +40,14 @@ def session_types():
             subsession_apps=['weak_link','norms','norms','pub_goods','pub_goods','pub_goods','pub_goods','pub_goods', 'results_donja'],
             doc=""""""
         ),
+        SessionType(
+            name='Two60',
+            base_pay=0,
+            participants_per_session=30,
+            participants_per_demo_session=10,
+            subsession_apps=['weak_link','norms','norms', 'results_donja'],
+            doc=""""""
+        ),
 
 
         SessionType(

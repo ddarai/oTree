@@ -36,7 +36,7 @@ AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 # e.g. EUR, CAD, GBP, CHF, CNY, JPY
-CURRENCY_CODE = 'EUR'
+CURRENCY_CODE = 'Points '
 
 # e.g. en-gb, de-de, it-it, fr-fr. see: https://docs.djangoproject.com/en/1.6/topics/i18n/
 LANGUAGE_CODE = 'en-us'
@@ -84,6 +84,8 @@ INSTALLED_OTREE_APPS = [
 SECRET_KEY = SECRET_KEY
 BASE_DIR = BASE_DIR
 WSGI_APPLICATION = 'wsgi.application'
+
+ACCESS_CODE_FOR_OPEN_SESSION = 'idd1610'
 
 SESSION_MODULE = 'session'
 

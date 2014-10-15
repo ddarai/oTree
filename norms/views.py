@@ -4,6 +4,7 @@ import norms.models as models
 from norms._builtin import Page, WaitPage
 from models import RATING_CHOICES
 from json import dumps
+from collections import Counter
 
 def variables_for_all_templates(self):
     return {
@@ -43,9 +44,8 @@ class Results(Page):
         option_labels = [ele[1] for ele in RATING_CHOICES]
 
         players = self.subsession.get_players()
-        popularity_counts = []
-        for option in options:
-            popularity_counts.append(sum([1 for p in players if p.rating == option]))
+        counter = Counter([p.rating for p in players])
+        popularity_counts = [counter[option] for option in options]
 
         return {
             'rating': self.player.get_rating_display(),
