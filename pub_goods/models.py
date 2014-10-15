@@ -32,8 +32,6 @@ class Group(otree.models.BaseGroup):
     subsession = models.ForeignKey(Subsession)
     # </built-in>
 
-
-
     players_per_group = PLAYERS_PER_GROUP
     
     sum_contribution = models.MoneyField(
@@ -66,5 +64,4 @@ class Player(otree.models.BasePlayer):
     )
 
     def contribution_choices(self):
-        print 'subsession: {}'.format(self.subsession)
         return money_range(0,self.subsession.endowment,1.00)
