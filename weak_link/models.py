@@ -29,7 +29,9 @@ class Subsession(otree.models.BaseSubsession):
 
     def set_payoffs(self):
         for p in self.get_players():
-             p.payoff = self.a + self.b * self.min_value - self.c * p.decision
+            assert p.decision
+            assert self.min_value
+            p.payoff = self.a + self.b * self.min_value - self.c * p.decision
 
 
     a = models.FloatField(default=200.0,doc="a+b*(minimum of all)-c*(own choice)")
