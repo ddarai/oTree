@@ -45,7 +45,7 @@ def session_types():
             base_pay=0,
             participants_per_session=60,
             participants_per_demo_session=10,
-            subsession_apps=['weak_link','norms','norms', 'results_donja'],
+            subsession_apps=['weak_link','norms','pub_goods', 'results_donja'],
             doc=""""""
         ),
 

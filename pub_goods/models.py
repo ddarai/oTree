@@ -7,7 +7,7 @@ from otree.common import Money, money_range
 
 author = 'Donja Darai'
 
-PLAYERS_PER_GROUP = 3
+PLAYERS_PER_GROUP = 10
 
 doc = """
 Public goods game with groups of {} and an marginal per capita return of 0.2
