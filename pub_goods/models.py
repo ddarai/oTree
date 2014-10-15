@@ -66,5 +66,4 @@ class Player(otree.models.BasePlayer):
     )
 
     def contribution_choices(self):
-        print 'subsession: {}'.format(self.subsession)
         return money_range(0,self.subsession.endowment,1.00)
