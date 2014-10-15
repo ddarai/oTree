@@ -39,7 +39,12 @@ class Results(Page):
         round_labels = range(1,self.subsession.number_of_rounds+1)
         avg_list = [None]*self.subsession.number_of_rounds
         for i, p in enumerate(self.player.me_in_all_rounds()):
-            avg_list[i]=float(p.group.avg_contribution)
+            try:
+                avg_list[i]=float(p.group.avg_contribution)
+            except:
+                print 'p.group.pk: {}'.format(p.group.pk)
+                print 'p.group.avg_contribution: {}'.format(p.group.pk)
+                raise
 
 
         return {
