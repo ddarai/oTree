@@ -25,12 +25,12 @@ class Subsession(otree.models.BaseSubsession):
         doc="minimum of all decisions")
 
     def minimum(self):
-        self.min_value = min(p.decision for p in self.get_players())
+        self.min_value = min([p.decision for p in self.get_players()])
 
     def set_payoffs(self):
-        #print 'self.min_value', self.min_value
+        print 'self.min_value', self.min_value
         for p in self.get_players():
-            #print 'p.decision', p.decision
+            print 'p.decision', p.decision
             assert p.decision is not None
             assert self.min_value is not None
 
